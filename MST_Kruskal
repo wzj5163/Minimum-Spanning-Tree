@@ -1,0 +1,52 @@
+%% MST of Kruskal
+clc,clear
+rng default
+P = rand([150,2]);
+DT = delaunayTriangulation(P);
+D = pdist(P);
+DM = pdist2(P,P);
+G=graph(DM);
+T=minspantree(G,'Method','sparse');
+figure;
+subplot(2,2,1);
+plot(P(:,1),P(:,2),'bo');
+hold on
+T1.Edges=sortrows(T.Edges,2);
+for i = 1:floor(length(T1.Edges.Weight)*0.25)
+    plot([P(T1.Edges.EndNodes(i,1),1),P(T1.Edges.EndNodes(i,2),1)]...
+        ,[P(T1.Edges.EndNodes(i,1),2),P(T1.Edges.EndNodes(i,2),2)],'r');
+end
+subtitle('25%');
+set(gca,'color','none','ytick',[],'yticklabel',[],'xtick',[],'xticklabel',[]);
+subplot(2,2,2);
+plot(P(:,1),P(:,2),'bo');
+hold on
+T1.Edges=sortrows(T.Edges,2);
+for i = 1:floor(length(T1.Edges.Weight)*0.5)
+    plot([P(T1.Edges.EndNodes(i,1),1),P(T1.Edges.EndNodes(i,2),1)]...
+        ,[P(T1.Edges.EndNodes(i,1),2),P(T1.Edges.EndNodes(i,2),2)],'r');
+end
+subtitle('50%');
+set(gca,'color','none','ytick',[],'yticklabel',[],'xtick',[],'xticklabel',[]);
+subplot(2,2,3);
+plot(P(:,1),P(:,2),'bo');
+hold on
+T1.Edges=sortrows(T.Edges,2);
+for i = 1:floor(length(T1.Edges.Weight)*0.75)
+    plot([P(T1.Edges.EndNodes(i,1),1),P(T1.Edges.EndNodes(i,2),1)]...
+        ,[P(T1.Edges.EndNodes(i,1),2),P(T1.Edges.EndNodes(i,2),2)],'r');
+end
+subtitle('75%');
+set(gca,'color','none','ytick',[],'yticklabel',[],'xtick',[],'xticklabel',[]);
+subplot(2,2,4);
+plot(P(:,1),P(:,2),'bo');
+hold on
+T1.Edges=sortrows(T.Edges,2);
+for i = 1:floor(length(T1.Edges.Weight)*1)
+    plot([P(T1.Edges.EndNodes(i,1),1),P(T1.Edges.EndNodes(i,2),1)]...
+        ,[P(T1.Edges.EndNodes(i,1),2),P(T1.Edges.EndNodes(i,2),2)],'r');
+end
+subtitle('100%');
+set(gca,'color','none','ytick',[],'yticklabel',[],'xtick',[],'xticklabel',[]);
+% set(gcf,'color','none');
+saveas(gcf,'Kruskal1','png')
