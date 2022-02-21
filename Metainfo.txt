@@ -4,7 +4,7 @@ Published in: 'MANDATORY!'
 
 Description: 'MANDATORY!'
 
-Keywords: 'MANDATORY!'
+Keywords: 'Minimum Spanning Tree'
 
 Author: 'Zijin Wang'
 
