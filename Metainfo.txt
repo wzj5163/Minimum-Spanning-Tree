@@ -6,7 +6,7 @@ Description: 'MANDATORY!'
 
 Keywords: 'MANDATORY!'
 
-Author: 'MANDATORY'
+Author: 'Zijin Wang'
 
 See also: 'optional: listing related Quantlets or Github code'
 
