@@ -1,10 +1,10 @@
-Name of Quantlet: 'MANDATORY! Has to be the same as the Quantlet file, without file type ending, e.g. R,py,...'
+Name of Quantlet: 'Minimum Spaning Tree'
 
 Published in: 'MANDATORY!'
 
 Description: 'MANDATORY!'
 
-Keywords: 'Minimum Spanning Tree'
+Keywords: 'Minimum Spanning Tree','Kruskal Algorithm','Prim Algorithm'
 
 Author: 'Zijin Wang'
 
